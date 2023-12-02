@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="address">
+        <item>상록원 3층</item>
+        <item>상록원 2층 </item>
+        <item>상록원 2층</item>
+        <item>남삭학사</item>
+        <item>창수 집 맛집</item>
+    </string-array>
+</resources>

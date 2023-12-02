@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnalyzeFoodActivity"
+    android:background="@drawable/testbackgroundtint">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/prebox"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/grey"
+            app:strokeWidth="1dp"
+           android:layout_marginStart="15dp"
+            app:cardCornerRadius="9dp"
+            android:background="@drawable/roundbackground"
+            >
+                <ImageView
+                    android:id="@+id/previousmonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <TextView
+            android:id="@+id/nowdate"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/black"
+            android:text="Selected Date: "
+            android:textSize="18sp"
+             />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/nextbox"
+            android:layout_marginEnd="15dp"
+           app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/grey"
+            app:strokeWidth="1dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="9dp"
+            android:background="@drawable/roundbackground"
+            >
+                <ImageView
+                    android:id="@+id/nextmonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/nextbox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+           android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="0dp"
+            android:background="@drawable/reclycerviewround"
+            android:orientation="vertical">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/typemealbox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/startColor"
+                    app:strokeWidth="1dp"
+                    app:cardCornerRadius="9dp"
+                    android:layout_weight="0.25"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/roundbackground"
+                    >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/con1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="조식"
+                            android:padding="15dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                        <TextView
+                                android:id="@+id/typemeal1count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toEndOf="@+id/con1"
+                            app:layout_constraintTop_toTopOf="@+id/con1"
+                            app:layout_constraintBottom_toBottomOf="@+id/con1"
+                            android:text="총 0회" android:padding="5dp"
+                            android:layout_marginStart="15dp"
+                            android:textSize="14sp"/>
+                                <TextView
+                                    android:id="@+id/typemealprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@+id/con1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:text="총 0원" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:id="@+id/typemealcal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@+id/typemealprice"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:text="총 0 Kcal" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/typemealbox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/startColor"
+                    app:strokeWidth="1dp"
+                    app:cardCornerRadius="9dp"
+                    android:layout_weight="0.25"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/roundbackground"
+                    >
+                  <androidx.constraintlayout.widget.ConstraintLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+                          <TextView
+                              android:id="@+id/con2"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toTopOf="parent"
+                              android:text="중식"
+                              android:padding="15dp"
+                              android:textColor="@color/black"
+                              android:textSize="20sp"/>
+                          <TextView
+                              android:id="@+id/typemeal2count"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              app:layout_constraintStart_toEndOf="@+id/con2"
+                              app:layout_constraintTop_toTopOf="@+id/con2"
+                              app:layout_constraintBottom_toBottomOf="@+id/con2"
+                              android:text="총 0회" android:padding="5dp"
+                              android:layout_marginStart="15dp"
+                              android:textSize="14sp"/>
+                          <TextView
+                              android:id="@+id/typemealprice2"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              app:layout_constraintTop_toBottomOf="@+id/con2"
+                              app:layout_constraintStart_toStartOf="parent"
+                              android:text="총 0원" android:padding="5dp"
+                              android:layout_marginStart="15dp"
+                              android:textSize="14sp"/>
+                          <TextView
+                              android:id="@+id/typemealcal2"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              app:layout_constraintTop_toBottomOf="@+id/typemealprice2"
+                              app:layout_constraintStart_toStartOf="parent"
+                              android:text="총 0 Kcal" android:padding="5dp"
+                              android:layout_marginStart="15dp"
+                              android:textSize="14sp"/>
+                  </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/typemealbox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/startColor"
+                    app:strokeWidth="1dp"
+                    app:cardCornerRadius="9dp"
+                    android:layout_weight="0.25"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/roundbackground"
+                    >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/con3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:text="석식"
+                                    android:padding="15dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"/>
+                                <TextView
+                                    android:id="@+id/typemeal3count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintStart_toEndOf="@+id/con3"
+                                    app:layout_constraintTop_toTopOf="@+id/con3"
+                                    app:layout_constraintBottom_toBottomOf="@+id/con3"
+                                    android:text="총 0회" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:id="@+id/typemealprice3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@+id/con3"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:text="총 0원" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:id="@+id/typemealcal3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@+id/typemealprice3"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:text="총 0 Kcal" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/typemealbox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/startColor"
+                    app:strokeWidth="1dp"
+                    app:cardCornerRadius="9dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="0.25"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/roundbackground"
+                    >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                                <TextView
+                                    android:id="@+id/con4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:text="음료"
+                                    android:padding="15dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"/>
+                                <TextView
+                                    android:id="@+id/typemeal4count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                   app:layout_constraintStart_toEndOf="@+id/con4"
+                                    app:layout_constraintTop_toTopOf="@+id/con4"
+                                    app:layout_constraintBottom_toBottomOf="@+id/con4"
+                                    android:text="총 0회" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:id="@+id/typemealprice4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@+id/con4"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:text="총 0원" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:id="@+id/typemealcal4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@+id/typemealprice4"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:text="총 0 Kcal" android:padding="5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:textSize="14sp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/worditem"
+    android:background="@drawable/reclycerviewround"
+    android:layout_marginBottom="20dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/itemcardview"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="16dp">
+        <ImageView
+            android:id="@+id/recyclerviewfoodImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/recyclerviewtypeMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="meal"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/itemcardview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recyclerviewfoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="음식 이름"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+      app:layout_constraintStart_toStartOf="@+id/recyclerviewtypeMeal"
+       app:layout_constraintTop_toBottomOf="@+id/recyclerviewtypeMeal" />
+
+    <TextView
+        android:id="@+id/recyclerviewKcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 Kcal"
+        android:layout_marginBottom="6dp"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="1dp"
+        app:layout_constraintStart_toStartOf="@+id/recyclerviewfoodName"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewfoodName" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
